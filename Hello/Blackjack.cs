@@ -20,7 +20,7 @@ namespace Hello
                 //comparing that given umber is valid
                 if (theirNumber == 0 || theirNumber > 21)
                 {
-                    Console.WriteLine("The given number is out of limits, try again.");
+                    Console.WriteLine("The given number is out of limits. Game over.");
                     break;
                 }
                 else
