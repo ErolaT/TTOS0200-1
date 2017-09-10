@@ -1,4 +1,5 @@
 ﻿using System;
+/// Toni Erola
 /// <summary>
 /// A simple example of Blackjack card game
 /// </summary>
