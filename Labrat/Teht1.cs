@@ -412,8 +412,7 @@ namespace Labrat
                 {
                     Console.Write(" ");
                 }
-                Console.Write("*");
-                Console.WriteLine();
+                Console.WriteLine("*");
             }
             Console.WriteLine();
         }

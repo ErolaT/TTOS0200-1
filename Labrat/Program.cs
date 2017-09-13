@@ -10,7 +10,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            Labrat.Teht6.Kulutus();
+            Labrat.Teht11.Kuvio();
         }
     }
 }
