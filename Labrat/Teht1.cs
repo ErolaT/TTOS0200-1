@@ -159,7 +159,7 @@ namespace Labrat
             double litrahinta = 1.595;
 
             Console.Write("Anna matka > ");
-            double matka = double.Parse(Console.ReadLine());
+            int matka = int.Parse(Console.ReadLine());
 
             double matkakulutus = (double)kulutus * (matka / 100);
             double matkahinta = (double)matkakulutus * litrahinta;

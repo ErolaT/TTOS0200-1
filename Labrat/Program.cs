@@ -10,7 +10,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            Labrat.Teht20.AlkeellinenCaesar();
+            Labrat.Teht6.Kulutus();
         }
     }
 }
