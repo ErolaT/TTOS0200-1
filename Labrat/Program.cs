@@ -14,7 +14,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            CDLevyHylly();
+            TestiPeti.Testi();
         }
 
         /*Tehtävä 1 Kiuas*/
@@ -165,6 +165,45 @@ namespace Labrat
             {
                 Console.WriteLine(levyt[i].ToString());
                 Console.WriteLine();
+            }
+        }
+        /*Tehtävä 2 Hissi*/
+        static void TestaaHissi()
+        {
+            DynamonHissi hissi = new DynamonHissi();
+
+            int siirtymä;
+
+            while (true)
+            {
+                Console.WriteLine("Hissi on kerroksessa > " + hissi.Kerros);
+                Console.Write("Anna kerros (1-5) (0 lopettaa loopin) > ");
+                siirtymä = int.Parse(Console.ReadLine());
+                if (siirtymä == 0)
+                {
+                    break;
+                }
+                hissi.Kerros = siirtymä;
+            }
+        }
+        /*Tehtävä 3 Vahvistin*/
+        static void TestaaVahvari()
+        {
+            Vahvistin mesaboogie = new Vahvistin();
+
+            int apu;
+
+            while (true)
+            {
+                Console.Write("Anna äänenvoimakkuus (0-100) (666 lopettaa) > ");
+                apu = int.Parse(Console.ReadLine());
+
+                if (apu == 666)
+                {
+                    break;
+                }
+
+                mesaboogie.Äänenvoimakkuus = apu;
             }
         }
     }
