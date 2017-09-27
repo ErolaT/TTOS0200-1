@@ -14,7 +14,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            TestiPeti.Testi();
+            TestaaTyöpaikka();
         }
 
         /*Tehtävä 1 Kiuas*/
@@ -205,6 +205,25 @@ namespace Labrat
 
                 mesaboogie.Äänenvoimakkuus = apu;
             }
+        }
+        static void TestaaTyöpaikka()
+        {
+            Työntekijä ryöukko = new Työntekijä("Risto Ryöukko", "Konekuski", "3200");
+
+            Console.WriteLine(ryöukko.ToString());
+
+            Pomo boss = new Pomo("Pomo Pomottaja", "CEO", "9000", "Jatke", "10000");
+
+            Console.WriteLine(boss.ToString());
+
+            Pomo boss2 = new Pomo();
+            boss2.Nimi = "Keijo Massimies";
+            boss2.Ammatti = "Pomomies";
+            boss2.Palkka = "8000";
+            boss2.Auto = "Volokkari";
+            boss2.Bonus = "2000";
+
+            Console.WriteLine(boss2.ToString());
         }
     }
 }

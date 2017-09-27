@@ -152,4 +152,83 @@ namespace Labrat
             }
         }
     }
+    /*Tehtävä 4 Ohjelmassa tulee pystyä käsittelemään työntekijöiden tietoja (Employee).
+        * Työntekijöiden osalta seuraavia tietoa pitää pystyä käsittelemään: työntekijän nimi
+        * (Name), työntekijän ammatti (Profession) ja palkka (Salary). Samassa ohjelmassa 
+        * pitää pystyä käsittelemään myös johtajien tietoja (Boss), heillä on edellisten 
+        * lisäksi myös auto (Car) ja palkkabonus (Bonus).*/
+    public class Työntekijä
+    {
+        public string Nimi { get; set; }
+        public string Ammatti { get; set; }
+        public string Palkka { get; set; }
+        public Työntekijä()
+        {
+
+        }
+
+        public Työntekijä(string nimi, string ammatti, string palkka) 
+        {
+            this.Nimi = nimi;
+            this.Ammatti = ammatti;
+            this.Palkka = palkka;
+        }
+
+        public override string ToString()
+        {
+            return "Nimi: " + Nimi + " Ammatti: " + Ammatti + " Palkka:" + Palkka;
+        }
+    }
+    public class Pomo : Työntekijä
+    {
+        public string Auto { get; set; }
+        public string Bonus { get; set; }
+        public Pomo()
+        {
+
+        }
+
+        public Pomo(string nimi, string ammatti, string palkka, string auto, string bonus) : base(nimi, ammatti, palkka)
+        {
+            this.Auto = auto;
+            this.Bonus = bonus;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " Auto: " + Auto + " Bonus: " + Bonus;
+        }
+    }
+    public class Kulkuneuvo
+    {
+        public string Nimi { get; set; }
+        public string Malli { get; set; }
+        public string Vuosimalli { get; set; }
+        public string Väri { get; set; }
+
+        public Kulkuneuvo()
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return "Nimi: " + Nimi + " Malli: " + Malli + " Vuosimalli: " + Vuosimalli + " Väri: " + Väri;
+        }
+    }
+    public class Polkupyörä
+    {
+        public string Vaihteet { get; set; }
+        public string VaihdeMalli { get; set; }
+
+        public Polkupyörä()
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " Vaihteet: " + Vaihteet + " Vaihteiden malli: " + VaihdeMalli;
+        }
+    }
 }
