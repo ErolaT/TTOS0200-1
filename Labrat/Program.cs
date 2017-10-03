@@ -14,7 +14,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            TestaaTyöpaikka();
+            TestaaTili();
         }
 
         /*Tehtävä 1 Kiuas*/
@@ -224,6 +224,107 @@ namespace Labrat
             boss2.Bonus = "2000";
 
             Console.WriteLine(boss2.ToString());
+        }
+        static void TestaaKulkuneuvo()
+        {
+            Polkupyörä kona = new Polkupyörä();
+
+            kona.Nimi = "Kona";
+            kona.Malli = "Maasto";
+            kona.Vuosimalli = "2010";
+            kona.Väri = "Musta";
+            kona.Vaihteet = true;
+            kona.VaihdeMalli = "Shimano";
+
+            Console.WriteLine("Pyörä 1\n" + kona.ToString());
+
+            Vene jolla = new Vene();
+
+            jolla.Nimi = "Jolla";
+            jolla.Malli = "245";
+            jolla.Vuosimalli = "1992";
+            jolla.Väri = "Valkoinen";
+            jolla.Paikat = 4;
+            jolla.Tyyppi = "Soutuvene";
+
+            Console.WriteLine("Vene 1\n" + jolla.ToString());
+        }
+        /*Tehtävä 6 Radio*/
+        static void TestaaRadio()
+        {
+            Radio pioneer = new Radio();
+
+            pioneer.Virta = true;
+            pioneer.Äänenvoimakkuus = 2;
+            pioneer.Taajuus = "4000,4";
+
+            Console.WriteLine("Radion tila\n" + pioneer.ToString());
+
+            pioneer.Taajuus = "2707,0";
+            pioneer.Äänenvoimakkuus = 10;
+
+            Console.WriteLine("Radion tila\n" + pioneer.ToString());
+
+            pioneer.Äänenvoimakkuus = -1;
+            pioneer.Taajuus = "1999,9";
+
+            Console.WriteLine("Radion tila\n" + pioneer.ToString());
+        }
+        /*Tehtävä 7 Kirjahylly*/
+        static void TestaaKirjahylly()
+        {
+            Levy pantera = new Levy();
+            Kirja ruotsi = new Kirja();
+            Elokuva forrest = new Elokuva();
+
+            Console.WriteLine("Hyllyssä on: ");
+
+            pantera.Tavara = "CD-levy";
+            pantera.Nimi = "Pantera";
+            pantera.Albumi = "Far Beyond Driven";
+            pantera.Vuosi = 1994;
+
+            Console.WriteLine(pantera.ToString());
+
+            ruotsi.Tavara = "Kirja";
+            ruotsi.Nimi = "Opettele Ruottia!";
+            ruotsi.Valmistaja = "Otava";
+
+            Console.WriteLine(ruotsi.ToString());
+
+            forrest.Tavara = "Elokuva";
+            forrest.Nimi = "Forrest Gump";
+            forrest.Kesto = 90;
+            forrest.Genre = "Draama";
+
+            Console.WriteLine(forrest.ToString());
+        }
+        /*Tehtävä 8 */
+        static void TestaaTili()
+        {
+            Tili nordea = new Tili("123456789-1234");
+
+            nordea.LisääRahaa(1000);
+
+            Console.WriteLine(nordea.ToString());
+
+            nordea.NostaRahaa(200);
+
+            Console.WriteLine(nordea.ToString());
+
+            Console.WriteLine("Tilin saldo: " + nordea.TulostaSaldo());
+
+            LuottoTili spankki = new LuottoTili("123456789-1234", 1000, 1000);
+
+            Console.WriteLine(spankki.ToString());
+
+            spankki.MaksaLuotolta(800);
+
+            Console.WriteLine(spankki.ToString());
+
+            spankki.MaksaVelka();
+
+            Console.WriteLine(spankki.ToString());
         }
     }
 }

@@ -199,6 +199,15 @@ namespace Labrat
             return base.ToString() + " Auto: " + Auto + " Bonus: " + Bonus;
         }
     }
+    /*Tehtävä 5 Toteutettavassa sovelluksessa tulisi pysyä käsittelemään 
+     * erilaisia kulkuneuvoja. Kaikilla kulkuneuvoilla on löydettävissä 
+     * yhteisinä ominaisuuksina: nimi, malli, vuosimalli ja väri. 
+     * Erikoistapauksina pitää pystyä käsittelemään polkupyöriä ja veneitä. 
+     * Polkupyörän osalta pitää pystyä erottelemaan se, että onko kyseessä 
+     * vaihdepyörä vai ei sekä mahdollisen vaihteiston mallinimi. Veneiden 
+     * osalta tietoina pitää ainakin olla veneen tyyppi (soutuvene, 
+     * moottorivene, kajakki, ...) ja kuinka monta istuinpaikkaa veneestä 
+     * löytyy. */
     public class Kulkuneuvo
     {
         public string Nimi { get; set; }
@@ -210,25 +219,292 @@ namespace Labrat
         {
 
         }
-
+        
         public override string ToString()
         {
             return "Nimi: " + Nimi + " Malli: " + Malli + " Vuosimalli: " + Vuosimalli + " Väri: " + Väri;
         }
     }
-    public class Polkupyörä
+    public class Polkupyörä : Kulkuneuvo
     {
-        public string Vaihteet { get; set; }
+        public bool Vaihteet { get; set; }
         public string VaihdeMalli { get; set; }
 
         public Polkupyörä()
         {
 
         }
-
         public override string ToString()
         {
             return base.ToString() + " Vaihteet: " + Vaihteet + " Vaihteiden malli: " + VaihdeMalli;
+        }
+    }
+    public class Vene : Kulkuneuvo
+    {
+        public string Tyyppi { get; set; }
+        private int paikat = 2;
+        public int Paikat
+        {
+            get { return paikat; }
+            set
+            {
+                this.paikat = value;
+                if (paikat < 0)
+                {
+                    this.paikat = 2;
+                }
+            }
+        }
+
+        public Vene()
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " Paikkoja: " + paikat + " kpl Tyyppi: " + Tyyppi;
+        }
+    }
+    /*Tehtävä 6 Kannettavassa radiossa on vain kolme säädintä: päälle/pois-kytkin,
+     * äänen voimakkuuden säädin (arvot 0, 1, 2,..., 9) ja kuunneltavan kanavan 
+     * taajuusvalinta (2000.0 - 26000.0). Laadi luokka kannettavan radion toteutukseksi.
+     * Käytä tekemääsi luokkaa pääohjelmasta käsin, eli testaile radion toimivuutta 
+     * erilaisilla voimakkuuden ja taajuuden arvoilla. Jätä asetus- ja tulostuslauseet 
+     * näkyville pääohjelmaan, jotta radio-olion käyttö voidaan todentaa.*/
+    public class Radio
+    {
+        private readonly int äänimax = 9;
+        private readonly int äänimin = 0;
+        public bool Virta { get; set; }
+        private int ääni;
+        public int Äänenvoimakkuus
+        {
+            get { return ääni; }
+            set
+            {
+                this.ääni = value;
+                if (ääni < äänimin)
+                {
+                    this.ääni = äänimin;
+                }
+                else if (ääni > äänimax)
+                {
+                    this.ääni = äänimax;
+                }
+            }
+        }
+        private string taajuus;
+        public string Taajuus
+        {
+            get { return taajuus; }
+            set
+            {
+                this.taajuus = value;
+                double.TryParse(taajuus, out double apu);
+                if (apu < 2000)
+                {
+                    taajuus = "2000,0";
+                }
+                else if (apu > 26000)
+                {
+                    taajuus = "26000,0";
+                }
+            }
+        }
+        public Radio()
+        {
+
+        }
+        public override string ToString()
+        {
+            return "Virta: " + Virta + " Äänenvoimakkuus: " + ääni + " Taajuus: " + taajuus;
+        }
+    }
+    /*Tehtävä 7 ICT-opiskelijan kirjahyllystä löytyy vaikka mitä erilaisia 
+     * tavaroita: kirjoja, lehtiä, cd-levyjä, dvd-levyjä, bluray-levyjä, 
+     * puhelimia, tabletteja, läppäreitä, ... jne. Pohdi UML-kaaviota käyttäen 
+     * millaisia luokkarakenteita (ainakin luokkien ja ominaisuuksien osalta) 
+     * esiintyy ja käytä apua perintää, jos tavaroille löytyy yhteisiä 
+     * ominaisuuksia. Toteuta tämän jälkeen muutamia luokkia, joissa perintää 
+     * esiintyy. Tee myös pääohjelma, jossa käytät tekemiäsi luokkia ja luot 
+     * olioita.  */
+    public class Kirjahylly
+    {
+        public string Tavara { get; set; }
+        public string Nimi { get; set; }
+
+        public Kirjahylly()
+        {
+        }
+
+        public override string ToString()
+        {
+            return "Mikä: " + Tavara + " Nimi: " + Nimi;
+        }
+    }
+    public class Levy : Kirjahylly
+    {
+        public string Albumi { get; set; }
+        private int vuosi;
+        public int Vuosi
+        {
+            get { return vuosi; }
+            set
+            {
+                this.vuosi = value;
+                if (vuosi < 0)
+                {
+                    this.vuosi = 0;
+                }
+            }
+        }
+
+        public Levy()
+        {
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " Albumi: " + Albumi + " Vuosi: " + vuosi;
+        }
+    }
+    public class Kirja : Kirjahylly
+    {
+        public string Valmistaja { get; set; }
+
+        public Kirja()
+        {
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " Valmistaja: " + Valmistaja;
+        }
+    }
+    public class Elokuva : Kirjahylly
+    {
+        public string Genre { get; set; }
+        private int kesto;
+        public int Kesto
+        {
+            get { return kesto; }
+            set
+            {
+                this.kesto = value;
+                if (kesto < 0)
+                {
+                    this.kesto = 0;
+                }
+            }
+        }
+
+        public Elokuva()
+        {
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + " Genre: " + Genre + " Kesto: " + kesto + " minuuttia";
+        }
+    }
+    /*Tehtävä 8 Pohdi jokin reaalimaailman asia, jonka kautta voit toteuttaa
+     * pienimuotoisen C#-ohjelman/toteutuksen, joka käyttää perintää. */
+     public class Tili
+    {
+        public string TiliNro { get; set; }
+        private int Saldo { get; set; }
+
+        public Tili(string numero)
+        {
+            this.TiliNro = numero;
+            this.Saldo = 0;
+        }
+        public Tili(string numero, int saldo)
+        {
+            this.TiliNro = numero;
+            this.Saldo = saldo;
+        }
+
+        public int TulostaSaldo()
+        {
+            return Saldo;
+        }
+        public void LisääRahaa(int raha) 
+        {
+            if (raha > 0)
+            {
+                this.Saldo += raha;
+            }
+        }
+        public void NostaRahaa(int raha)
+        {
+            if (!(this.Saldo < 0))
+            {
+                this.Saldo -= raha;
+            }
+            else
+            {
+                Console.WriteLine("Rahaa ei ole tarpeeksi");
+            }
+        }
+        public override string ToString()
+        {
+            return "Tilinumero: " + TiliNro + " Tilin saldo: " + Saldo;
+        }
+    }
+    public class LuottoTili : Tili
+    {
+        public int Luotto { get; set; }
+        private int Velka = 0;
+        private int Luottomax;
+
+        public LuottoTili(string numero, int saldo, int luotto) : base(numero, saldo)
+        {
+            this.Luotto = luotto;
+            this.Luottomax = luotto;
+        }
+
+        public void MaksaLuotolta(int raha)
+        {
+            if (!((Luottomax - raha) < 0) && !(Luotto < 0) && raha > 0)
+            {
+                this.Luotto -= raha;
+                this.Velka += raha;
+            }
+        }
+        public void TulostaVelka()
+        {
+            this.Velka = Luotto - Luottomax;
+            Console.WriteLine("Velkasaldo > " + Velka);
+        }
+        public void MaksaVelka()
+        {
+            while (true)
+            {
+                Console.WriteLine("Velkasaldon maksu, velkaa jäljellä > " + Velka + " Paljonko haluat maksaa?");
+                int apu = int.Parse(Console.ReadLine());
+                if (apu == this.Velka)
+                {
+                    this.Velka = 0;
+                    this.Luotto = this.Luottomax;
+                    break;
+                }
+                else if (apu > this.Velka)
+                {
+                    Console.WriteLine("Ei voida maksaa");
+                }
+                else
+                {
+                    this.Velka = this.Velka - apu;
+                    this.Luotto = this.Luotto + apu;
+                    break;
+                }   
+            }
+        }
+        public override string ToString()
+        {
+            return base.ToString() + " Luoton määrä: " + Luotto + " Velan määrä: " + Velka;
         }
     }
 }
