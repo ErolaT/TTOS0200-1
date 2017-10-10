@@ -14,7 +14,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            TestaaTili();
+            TestaaRengas();
         }
 
         /*Tehtävä 1 Kiuas*/
@@ -325,6 +325,26 @@ namespace Labrat
             spankki.MaksaVelka();
 
             Console.WriteLine(spankki.ToString());
+        }
+
+        /*Tehtävä 1 Rengas*/
+        static void TestaaRengas()
+        {
+            Ajoneuvo auto = new Ajoneuvo("Toyota", "Supra");
+            Lab4 nokia = new Lab4("Nokia", "Hakkapeliitta 8", 18);
+
+            auto.LisääRenkaat(nokia);
+            auto.LisääRenkaat(nokia);
+            auto.LisääRenkaat(nokia);
+            auto.LisääRenkaat(nokia);
+
+            Console.WriteLine(auto.ToString());
+
+            Ajoneuvo mpo = new Ajoneuvo("Suzuki", "GSX");
+            mpo.LisääRenkaat(new Lab4("Michelin", "City Grip", 10));
+            mpo.LisääRenkaat(new Lab4("Michelin", "City Grip", 10));
+
+            Console.WriteLine(mpo.ToString());
         }
     }
 }
