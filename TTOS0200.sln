@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{43D3A9D9-D831-46CD-BE33-1DE6770DB406}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labrat", "Labrat\Labrat.csproj", "{B5CCF0FE-1406-4CF5-A905-D4BBE170ADA4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opiskelija", "Opiskelija\Opiskelija.csproj", "{2614B8A0-6A0B-4B50-892E-4911F5C1F76B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vk41", "Vk41\Vk41.csproj", "{548A2931-CC12-40D7-B691-1CE23A4587E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2614B8A0-6A0B-4B50-892E-4911F5C1F76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2614B8A0-6A0B-4B50-892E-4911F5C1F76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2614B8A0-6A0B-4B50-892E-4911F5C1F76B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548A2931-CC12-40D7-B691-1CE23A4587E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548A2931-CC12-40D7-B691-1CE23A4587E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548A2931-CC12-40D7-B691-1CE23A4587E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548A2931-CC12-40D7-B691-1CE23A4587E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
