@@ -86,12 +86,60 @@ namespace JAMK.IT.MiniAsio
 
                 //Luodaan uusi Opiskelija olio
                 Opiskelija uusi = new Opiskelija(etunimi, sukunimi, asioid, ryhma);
+                opiskelijat.Add(uusi);
+
+                Console.WriteLine("MiniASIOn kaikki opiskelijat");
+                foreach (var o in opiskelijat)
+                {
+                    Console.WriteLine(o.ToString());
+                }
 
             }
         }
+        static void TestaaCD()
+        {
+            CD pantera = new CD("Pantera", "Far Beyond Driven");
+            pantera.LisaaKappale(new Kappale("Strength Beyond Strength", "3:39"));
+            pantera.LisaaKappale(new Kappale("Becoming", "3:05"));
+            pantera.LisaaKappale(new Kappale("5 Minutes Alone", "5:50"));
+            pantera.LisaaKappale(new Kappale("I'm Broken", "4:25"));
+            pantera.LisaaKappale(new Kappale("Good Friends and a Bottle of Pills", "2:54"));
+            pantera.LisaaKappale(new Kappale("Hard Lines, Sunken Cheeks", "7:01"));
+            pantera.LisaaKappale(new Kappale("Slaughtered", "3:57"));
+            pantera.LisaaKappale(new Kappale("25 years", "6:06"));
+            pantera.LisaaKappale(new Kappale("Shedding Skin", "5:37"));
+            pantera.LisaaKappale(new Kappale("Use My Third Arm", "4:52"));
+            pantera.LisaaKappale(new Kappale("Throes of Rejection", "5:01"));
+            pantera.LisaaKappale(new Kappale("Planet Caravan", "4:04"));
+
+            Console.WriteLine(pantera.ToString());
+        }
+        static void TestaaPakka()
+        {
+            Korttipakka muoviset = new Korttipakka();
+            for (int i = 0; i < 13; i++)
+            {
+                muoviset.LisaaKortti(new Kortti("Hertta", (i + 1)));
+            }
+            for (int i = 0; i < 13; i++)
+            {
+                muoviset.LisaaKortti(new Kortti("Ruutu", (i + 1)));
+            }
+            for (int i = 0; i < 13; i++)
+            {
+                muoviset.LisaaKortti(new Kortti("Risti", (i + 1)));
+            }
+            for (int i = 0; i < 13; i++)
+            {
+                muoviset.LisaaKortti(new Kortti("Pata", (i + 1)));
+            }
+
+            Console.WriteLine(muoviset.ToString());
+        }
+
         static void Main(string[] args)
         {
-            Testaa();
+            TestaaPakka();
         }
     }
 }
