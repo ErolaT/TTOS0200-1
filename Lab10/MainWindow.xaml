@@ -1,0 +1,16 @@
+﻿<Window x:Class="Lab10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="truck" Content="Trucks" HorizontalAlignment="Left" Margin="95,85,0,0" VerticalAlignment="Top" Width="135" Height="61" FontWeight="Bold" FontSize="16" Click="truck_Click"/>
+        <Button x:Name="car" Content="Cars" HorizontalAlignment="Left" Margin="293,85,0,0" VerticalAlignment="Top" Width="135" Height="61" FontWeight="Bold" FontSize="16" Click="car_Click"/>
+        <TextBlock x:Name="txbTruck" HorizontalAlignment="Left" Margin="95,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="135" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="0"/>
+        <TextBlock x:Name="txbCar" HorizontalAlignment="Left" Margin="293,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="135" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="0"/>
+
+    </Grid>
+</Window>
