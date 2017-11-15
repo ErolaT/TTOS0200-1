@@ -1,0 +1,27 @@
+﻿<Window x:Class="Pintaala.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pintaala"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="522.989" Width="736.207">
+    <Grid Margin="0,0,2,0">
+        <TextBox x:Name="txtLeveys" HorizontalAlignment="Left" Height="23" Margin="519,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtKorkeus" HorizontalAlignment="Left" Height="23" Margin="519,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtKarmi" HorizontalAlignment="Left" Height="23" Margin="519,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="txbPA" HorizontalAlignment="Left" Margin="519,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="54"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="519,162,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,65,0,0" TextWrapping="Wrap" Text="Ikkunan leveys:" VerticalAlignment="Top" Height="22" Width="107"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,93,0,0" TextWrapping="Wrap" Text="Ikkunan korkeus:" VerticalAlignment="Top" Height="22" Width="107"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,121,0,0" TextWrapping="Wrap" Text="Karmipuun leveys:" VerticalAlignment="Top" Height="22" Width="107"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,201,0,0" TextWrapping="Wrap" Text="Ikkunan pinta-ala:" VerticalAlignment="Top" Height="22" Width="107"/>
+        <TextBlock x:Name="txbLPA" HorizontalAlignment="Left" Margin="519,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBlock x:Name="txbKP" HorizontalAlignment="Left" Margin="519,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22" Padding="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,228,0,0" TextWrapping="Wrap" Text="Lasin pinta-ala:" VerticalAlignment="Top" Height="22" Width="107"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,255,0,0" TextWrapping="Wrap" Text="Karmin piiri:" VerticalAlignment="Top" Height="22" Width="107"/>
+        <Rectangle x:Name="ikkuna" Fill="#FFCECEFF" HorizontalAlignment="Left" Height="100" Margin="19,65,0,0" Stroke="Black" StrokeThickness="5" VerticalAlignment="Top" Width="226"/>
+        <TextBlock x:Name="txbVirhe" HorizontalAlignment="Left" Margin="407,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="293"/>
+
+    </Grid>
+</Window>
