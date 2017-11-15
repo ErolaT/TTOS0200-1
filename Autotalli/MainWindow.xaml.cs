@@ -31,10 +31,12 @@ namespace Autotalli
             //Asetetaan comboboxiin kaikki eri automerkit
             //Vaihtoehto 1
             List<string> merkit = new List<string>();
-            merkit.Add("Audi");
+            /*merkit.Add("Audi");
             merkit.Add("Saab");
-            merkit.Add("Volvo");
-            cmbAutot.ItemsSource = merkit;
+            merkit.Add("Volvo");*/
+            //Vaihtoehto 2, kysytään datasta automerkit
+            var result = autot.Select(m => m.Merkki.ToString());
+            cmbAutot.ItemsSource = result;
         }
 
         private void btnHaeAutot_Click(object sender, RoutedEventArgs e)
