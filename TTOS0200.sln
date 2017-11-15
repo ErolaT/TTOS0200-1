@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{43D3A9D9-D831-46CD-BE33-1DE6770DB406}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valuuttalaskuri", "Valuuttalaskuri\Valuuttalaskuri.csproj", "{68CED644-3B81-45FA-9422-F48688D95099}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pintaala", "Pintaala\Pintaala.csproj", "{83D4613C-0FF9-4305-B894-2C03EF7DA798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutotalliDemo", "Autotalli\AutotalliDemo.csproj", "{CCE42D99-9238-4FB6-BEE8-55D0A42E379E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{83D4613C-0FF9-4305-B894-2C03EF7DA798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83D4613C-0FF9-4305-B894-2C03EF7DA798}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83D4613C-0FF9-4305-B894-2C03EF7DA798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCE42D99-9238-4FB6-BEE8-55D0A42E379E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCE42D99-9238-4FB6-BEE8-55D0A42E379E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCE42D99-9238-4FB6-BEE8-55D0A42E379E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCE42D99-9238-4FB6-BEE8-55D0A42E379E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
