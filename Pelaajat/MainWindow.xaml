@@ -1,0 +1,17 @@
+﻿<Window x:Class="Pelaajat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pelaajat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="358.046" Width="525">
+    <Grid>
+        <StackPanel Background="Red" Height="319" VerticalAlignment="Bottom">
+             <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btnPelaajat" Content="Hae Pelaajat" Margin="5" Click="btnPelaajat_Click"></Button>
+             </StackPanel>
+        </StackPanel>
+        <DataGrid x:Name="dtgPelaajat" Margin="90,0,0,0"/>
+    </Grid>
+</Window>

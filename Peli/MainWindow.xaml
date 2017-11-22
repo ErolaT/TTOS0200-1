@@ -1,0 +1,20 @@
+﻿<Window x:Class="Peli.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Peli"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="GreenYellow">
+        <ComboBox x:Name="cbxPeli" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbRivit" HorizontalAlignment="Left" Height="23" Margin="262,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnArvo" Content="Arvo" HorizontalAlignment="Left" Margin="150,124,0,0" VerticalAlignment="Top" Width="75" Click="btnArvo_Click"/>
+        <Button x:Name="btnTyhjennä" Content="Tyhjennä" HorizontalAlignment="Left" Margin="262,124,0,0" VerticalAlignment="Top" Width="75" Click="btnTyhjennä_Click"/>
+        <Label Content="Valitse peli:" HorizontalAlignment="Left" Margin="116,10,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label Content="Rivien määrä:" HorizontalAlignment="Left" Margin="116,59,0,0" VerticalAlignment="Top" Width="81"/>
+        <ScrollViewer Margin="0,149,0,0">
+            <TextBlock x:Name="txbTulos" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
